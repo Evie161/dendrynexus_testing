@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Find unused Dendry scenes",
+            "type": "shell",
+            "command": "node ./.vscode/find-unused.js",
+            "problemMatcher": {
+                "owner": "dendry-unused",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.+):(\\d+):(\\d+)-(\\d+): (warning|info|error): (.+)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "endColumn": 4,
+                    "severity": 5,
+                    "message": 6
+                }
+            },
+            "presentation": {
+                "reveal": "never"
+            }
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+title: Status
+new-page: true
+is-special: true
+
+= Status
+times - kicked out of chamber [+ times_kicked_out +]

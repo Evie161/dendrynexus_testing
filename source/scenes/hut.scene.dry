@@ -1,0 +1,27 @@
+on-arrival: times_drank = 0
+go-to: @intro
+choose-if: times_kicked_out < 3 
+unavailable-subtitle: You are banned
+
+@intro
+title: uwu 
+new-page: true 
+go-to: kickout if times_drank >= 5
+
+You and the rest of your mps arrive in the chamber, where Nečas is swetting his balls of, what will you do next?
+
+- @drink: Drink Publicly 
+
+@drink
+on-arrival: times_drank += 1
+
+Nečas stares at you in bewilderment
+You have drunk [+ times_drank +] times.
+
+- @prevScene: carry on
+
+@kickout
+new-page: true 
+on-departure: times_kicked_out += 1
+
+your drunk ahh got kicked out
